@@ -19,27 +19,28 @@ class FamilyStructure:
             }
         ]
 
-    # This method generates a unique incremental ID
+    # This method generates a unique incremental ID //Este método genera un ID único e incremental.
     def _generate_id(self):
         generated_id = self._next_id
         self._next_id += 1
         return generated_id
 
     def add_member(self, member):
-        ## You have to implement this method
-        ## Append the member to the list of _members
+        ## You have to implement this method// Tienes que implementar este método.
+        ## Append the member to the list of _members // Añadir el miembro a la lista _members.
         pass
+     
 
     def delete_member(self, id):
-        ## You have to implement this method
-        ## Loop the list and delete the member with the given id
+        ## You have to implement this method// Tienes que implementar este método.
+        ## Loop the list and delete the member with the given id //Recorre la lista y elimina el miembro con el id dado.
         pass
 
     def get_member(self, id):
-        ## You have to implement this method
-        ## Loop all the members and return the one with the given id
+        ## You have to implement this method// Tienes que implementar este método.
+        ## Loop all the members and return the one with the given id //Recorre todos los miembros y devuelve aquel cuyo id coincida con el proporcionado.
         pass
 
-    # This method is done, it returns a list with all the family members
+    # This method is done, it returns a list with all the family members// Este método está listo; devuelve una lista con todos los miembros de la familia. 
     def get_all_members(self):
         return self._members

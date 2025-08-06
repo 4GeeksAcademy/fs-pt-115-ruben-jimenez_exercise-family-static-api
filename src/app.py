@@ -13,17 +13,17 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 CORS(app)
 
-# Create the jackson family object
+# Create the jackson family object// Crea el objeto de la familia Jackson.
 jackson_family = FamilyStructure("Jackson")
 
 
-# Handle/serialize errors like a JSON object
+# Handle/serialize errors like a JSON object // 
 @app.errorhandler(APIException)
 def handle_invalid_usage(error):
     return jsonify(error.to_dict()), error.status_code
 
 
-# Generate sitemap with all your endpoints
+# Generate sitemap with all your endpoints// Genera un sitemap con todos tus endpoints
 @app.route('/')
 def sitemap():
     return generate_sitemap(app)
@@ -31,7 +31,7 @@ def sitemap():
 
 @app.route('/members', methods=['GET'])
 def handle_hello():
-    # This is how you can use the Family datastructure by calling its methods
+    # This is how you can use the Family datastructure by calling its methods// Así es como puedes utilizar la estructura de datos Family llamando a sus métodos.
     members = jackson_family.get_all_members()
     response_body = {"hello": "world",
                      "family": members}
